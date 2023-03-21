@@ -1,0 +1,19 @@
+<div class="container">
+  <h3>Login</h3>
+  <form [formGroup]="loginForm" (ngSubmit)="login()">
+    <div class="box emailBox">
+      <label for="email">Email</label>
+      <br />
+      <input formControlName="email" class="loginbar" id="email">
+    </div>
+    <div class = "box passwordBox">
+      <label for="password">Password</label>
+      <br />
+      <input formControlName="password" class="loginbar" id="password">
+    </div>
+  </form>
+  <button class="auth" [disabled]="!submitValid" (click)="login()">Submit</button>
+  <p class="error" *ngIf="error != ''">{{ error }}</p>
+  </div>
+  
+  

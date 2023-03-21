@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'bucket-list-app';
+  username: string = "";
+  
+  constructor() {
+    let username:any =  window.localStorage.getItem('Username');
+    if (username) {
+      this.username = username;
+    }
+  }
 }

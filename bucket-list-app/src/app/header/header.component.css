@@ -1,0 +1,12 @@
+.logo {
+  max-width: 50vh;
+  max-height: 8vh;
+}
+
+.header {
+  padding: 2vh 2vw;
+  background-color: #d8e4c8;
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}

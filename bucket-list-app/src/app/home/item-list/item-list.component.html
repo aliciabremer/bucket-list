@@ -1,0 +1,24 @@
+<div class="list">
+  <h2>{{title}}</h2>
+  <div class="line"></div>
+  <div class="items">
+    <div *ngFor="let item of lst; index as i">
+      <div class="item">
+        <div class="leftItem">
+          <input type="checkbox" class="box" [(ngModel)]="item.complete" (change)="onSelection(item)" />
+          <span>{{item.text}}</span>
+        </div>
+        <div class="rightItem">
+          <button (click)="edit.emit(item)" *ngIf="editable">Edit</button>
+          <button (click)="delete.emit(item._id)">Delete</button>
+        </div>
+      </div>
+    </div>
+    <div *ngIf="lst.length == 0" style="text-align:center">
+      No Items Yet!
+    </div>
+  </div>
+  <div class="end">
+    <button class="endButton" (click)="clicked.emit()">{{button}}</button>
+  </div>
+</div>

@@ -1,1 +1,6 @@
-<p>header works!</p>
+<div class="header">
+  <a href="home">
+    <img src="../../assets/logo.png" alt="Trees Logo" class="logo" >
+  </a>
+  <app-account *ngIf="loggedIn" [username]="username" (loggedOut)="onLoggedOut($event)"></app-account>
+</div>

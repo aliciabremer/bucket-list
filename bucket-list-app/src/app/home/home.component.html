@@ -1,1 +1,34 @@
-<p>home works!</p>
+<div class="home">
+  <div class="flex-container">
+    <div class="flex-item-left">
+      <app-item-list
+        [title]="'My Bucket List Items'"
+        [button]="'Create Item'"
+        [lst]="itemsPersonal"
+        [editable]="true"
+        (clicked)="createItem()"
+        (markComplete)="onMarkComplete($event)"
+        (edit)="onEditItem($event, 'personal')"
+        (delete)="onDeleteItem($event, 'personal')"
+      />
+    </div>
+    <div class="flex-item-right">
+      <app-item-list
+        [title]="'Saved Bucket List Items'"
+        [button]="'Match!'"
+        [lst]="itemsSaved"
+        [editable]="false"
+        (clicked)="match()"
+        (markComplete)="onMarkComplete($event)"
+        (edit)="onEditItem($event, 'saved')"
+        (delete)="onDeleteItem($event, 'saved')"
+      />
+    </div>
+  </div>
+  <div class="popup" *ngIf="createItems">
+    <app-create (complete)="onCompleteCreation($event[0], $event[1])" [error]="errorCreation" [title]="'New Bucket List Item'" [text]="''"></app-create>
+  </div>
+  <div class="popup" *ngIf="editItems">
+    <app-create (complete)="onCompleteEdit($event[0], $event[1])" [error]="errorEdit" [title]="'Edit Bucket List Item'" [text]="editItem.text"></app-create>
+  </div>
+</div>

@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+h3 {
+  margin: 5px;
+}
+
+.auth {
+  font-family: 'Lustria', serif;
+  background-color: #105b34;
+  color: #ffffff;
+  font-size: calc(12px + 0.5vw);
+  width: 20vw;
+  padding: 5px;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+}
+
+.auth:disabled {
+  opacity: 0.5;
+}
+
+.box {
+  min-width: 200px;
+  width: 40vw;
+  min-height: 50px;
+  padding: 4px;
+  font-family: 'Lustria', serif;
+  font-size: calc(12px + 0.5vw);
+}
+
+label {
+  font-family: 'Lustria', serif;
+  font-size: calc(12px + 0.5vw);
+}
+
+.error {
+  color: red;
+  font-size: calc(8px + 0.5vw);
+}
+
+.loginbar {
+  border-style: solid;
+  width: 80%;
+  height: 3vh;
+  font-size: calc(12px + 0.5vw);
+  font-family: 'Lustria', serif;
+}
+
+.loginbar:focus {
+  outline:none;
+}

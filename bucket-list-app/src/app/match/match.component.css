@@ -1,0 +1,35 @@
+.match {
+  width: 100%;
+  height: 100%;
+  background-color: #d8e4c8;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  text-align: center;
+  padding: 0.5vw;
+}
+
+.title h4 {
+  margin: 0;
+  color: #524c4c;
+}
+
+.matching {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+button {
+  margin: 1vw;
+  cursor: pointer;
+}
+
+.return {
+  
+}

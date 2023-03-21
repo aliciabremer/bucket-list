@@ -1,0 +1,29 @@
+<div class="container">
+<h3>Sign Up</h3>
+<form [formGroup]="signUpForm" (ngSubmit)="createUser()">
+  <div class="box emailBox">
+    <label for="email">Email</label>
+    <br />
+    <input formControlName="email" class="loginbar" id="email">
+  </div>
+  <div class="box usernameBox">
+    <label for="username">Username</label>
+    <br />
+    <input formControlName="username" class="loginbar" id="username">
+  </div>
+  <div class = "box passwordBox">
+    <label for="password">Password</label>
+    <br />
+    <input formControlName="password" class="loginbar" id="password">
+  </div>
+  <div class="box confirmPassBox">
+    <label for="confirmpassword">Confirm Password</label>
+    <br />
+    <input formControlName="confirmpassword" class="loginbar" id="confirmpassword">
+  </div>
+  <p class="error" *ngIf="signUpForm.value.password != signUpForm.value.confirmpassword">Passwords do not match.</p>
+</form>
+<button class="auth" [disabled]="!submitValid" (click)="createUser()">Submit</button>
+<p class="error" *ngIf="error != ''">{{ error }}</p>
+</div>
+
