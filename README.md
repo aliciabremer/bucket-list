@@ -1,3 +1,3 @@
-# Bucket List Matcher Application
+# Bucket List Match App
 
 Hello!
