@@ -8,5 +8,7 @@ router.post("/complete/:item_id", auth, itemsController.markCompleted);
 router.post("/edit/:item_id", auth, itemsController.updateItem);
 router.post("/delete/:item_id", auth, itemsController.deleteItem);
 router.get("/items/:username", auth, itemsController.getItems);
+router.get("/match/:username", auth, itemsController.getMatchItems);
+
 
 module.exports = router;

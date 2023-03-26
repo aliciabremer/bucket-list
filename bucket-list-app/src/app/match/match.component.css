@@ -25,11 +25,25 @@
   height: 100%;
 }
 
+.matchbutton {
+  background-color: #40641d;
+  border: none;
+  border-radius: 50%;
+  aspect-ratio: 1/1;
+  padding: 2vh;
+  font-family: 'Lustria', serif;
+  color: white;
+  text-align: center;
+  line-height: 0;
+}
+
 button {
   margin: 1vw;
   cursor: pointer;
 }
 
 .return {
-  
+  border: solid 2px white;
+  background-color: #d8e4c8;
+  padding: 2vh;
 }

@@ -3,10 +3,13 @@
     <h4>Match Bucket List Items</h4>
   </div>
   <div class="matching">
-    <button >No</button>
-    <button>Yes</button>
+    <button class="matchbutton" (click)="noMatch()">No</button>
+    <div>
+      {{ matchItems.length > ind ? matchItems[ind].text : '' }}
+    </div>
+    <button class="matchbutton" (click)="addMatch()">Yes</button>
   </div>
   <div>
-    <button class="return">Return to home</button>
+    <button class="return" (click)="navigateHome()">Return to home</button>
   </div>
 </div>

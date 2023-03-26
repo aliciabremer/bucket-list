@@ -69,3 +69,12 @@ exports.getItems = async (req, res) => {
   });
 }
 
+exports.getMatchItems = async (req, res) => {
+  Item.find({user: {$ne : req.params.username},originalUser: {$ne : req.params.username}}, (err,result)=>{
+    if(err){
+        res.send(err)
+    }
+    res.send(result)
+  });
+}
+

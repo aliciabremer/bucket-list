@@ -15,7 +15,13 @@ export class ItemsService {
     return this.http.get<IItem[]>(`${environment.baseURL}item/items/${username}`);
   }
 
+  // this should probably be a pagination situation...
+  getMatchItems(username: string): Observable<IItem[]> {
+    return this.http.get<IItem[]>(`${environment.baseURL}item/match/${username}`)
+  }
+
   createItem(payload: any) {
+    console.log("creating")
     return this.http.post(`${environment.baseURL}item/create`, payload);
   }
 
