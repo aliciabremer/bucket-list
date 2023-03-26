@@ -21,7 +21,6 @@ export class ItemsService {
   }
 
   createItem(payload: any) {
-    console.log("creating")
     return this.http.post(`${environment.baseURL}item/create`, payload);
   }
 

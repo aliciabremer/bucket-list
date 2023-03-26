@@ -1,6 +1,7 @@
 const Item = require("./itemsModel")
 
 exports.createNewItem = async (req, res) => {
+  console.log("Creating!!")
   try {
     let item = new Item({
       text: req.body.text,

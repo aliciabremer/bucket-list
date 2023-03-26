@@ -1,0 +1,23 @@
+version: '3.7'
+
+services:
+
+  mongo-db:
+    image: mongo
+    ports:
+      - '27017:27017'
+
+  server:
+    build: server
+    image: aliciabremer/bucketlist_server
+    ports:
+      - '3001:3001'
+    links:
+      - mongo-db
+
+  client:
+    build: bucket-list-app
+    image: aliciabremer/bucketlist_frontend
+    ports:
+      - '4200:4200'
+  

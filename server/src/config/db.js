@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 module.exports = function (app) {
     mongoose.set('strictQuery', true);
-    mongoose.connect("mongodb://localhost:27017/angular-auth", {
+    mongoose.connect("mongodb://mongo-db:27017/angular-auth", {
         useUnifiedTopology: true,
         useNewUrlParser: true,
     }).then(connrction => console.log("Application is connected to db")).catch(err => console.log(err))
