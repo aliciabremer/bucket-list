@@ -88,7 +88,8 @@ export class HomeComponent implements OnInit {
 
   onCompleteCreation(success: boolean, item: any) {
     if (success) {
-      this.items.createItem(item).subscribe({
+      const username = window.localStorage.getItem('Username')
+      this.items.createItem({...item, user: username, originalUser: username, complete: false}).subscribe({
         next: (data:any) => {
           const { ['__v']: v, ...newItem } = data.data
           this.itemsPersonal.push(newItem)

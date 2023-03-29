@@ -37,7 +37,7 @@ export class SignupComponent implements OnInit {
   ngOnInit(): void {
     this.signUpForm.valueChanges.subscribe(
       data => {
-        if (data.password != data.confirmpassword && data.password && data.password != "" && data.confirmpassword != "") {
+        if (data.password && data.password != "" && data.confirmpassword != "") {
           this.passwordsDiff = data.password != data.confirmpassword
         }
         this.usernameExists = data.username != ""
